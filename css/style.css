@@ -873,6 +873,47 @@ article .post-body blockquote:before {
 svg:not(:root) {
   overflow: hidden;
 }
+.resume-wrapper .basic {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+.resume-wrapper .basic img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.resume-wrapper .basic .name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+.resume-wrapper .basic div {
+  line-height: 30px;
+}
+.resume-wrapper .basic .love div,
+.resume-wrapper .basic .love a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #000;
+  transition: all linear 0.2s;
+}
+.resume-wrapper .basic .love div .icon-github,
+.resume-wrapper .basic .love a .icon-github {
+  font-size: 20px;
+  vertical-align: text-top;
+}
+.resume-wrapper .basic .love div i,
+.resume-wrapper .basic .love a i {
+  display: inline-block;
+  margin-right: 4px;
+}
+.resume-wrapper .basic .love a {
+  cursor: pointer;
+}
+.resume-wrapper .basic .love a:hover {
+  color: #888;
+}
 #social-share {
   width: 50px;
   float: right;
