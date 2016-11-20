@@ -208,46 +208,12 @@ header.scrolled #nav-toggle {
 }
 .m-header .title-container {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
   color: #fff;
   text-align: center;
-  padding: 15px 30px;
-  background: rgba(0,0,0,0.5);
-}
-.m-header .title-container:before {
-  display: block;
-  content: "";
-  border: 30px solid transparent;
-  border-left-width: 10px;
-  border-right-width: 10px;
-  border-bottom-color: rgba(0,0,0,0.5);
-  border-right-color: rgba(0,0,0,0.5);
-  position: absolute;
-  left: 0%;
-  top: 0;
-  transform: translate3d(-100%, 0, 0);
-}
-.m-header .title-container:after {
-  display: block;
-  content: "";
-  border: 30px solid transparent;
-  border-left-width: 10px;
-  border-right-width: 10px;
-  border-top-color: rgba(0,0,0,0.5);
-  border-left-color: rgba(0,0,0,0.5);
-  position: absolute;
-  left: 100%;
-  top: 0;
-}
-.m-header .title {
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 30px;
-}
-.m-header .subtitle {
-  font-size: 18px;
+  width: 40%;
 }
 .m-header .top-image {
   display: block;
@@ -269,6 +235,82 @@ header.scrolled #nav-toggle {
   position: absolute;
   width: 100%;
   overflow: hidden;
+}
+#s-text text {
+  font-size: 2em;
+}
+.m-header .title-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.text-copy {
+  fill: transparent;
+  stroke: #fff;
+  stroke-dasharray: 7% 28%;
+  stroke-width: 1px;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  animation-name: stroke-offset;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: stroke-offset;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: reverse;
+  -webkit-animation-fill-mode: both;
+}
+.text-copy:nth-child(1) {
+  stroke: #fff;
+  stroke-dashoffset: 7%;
+}
+.text-copy:nth-child(2) {
+  stroke: #fff;
+  stroke-dashoffset: 14%;
+}
+.text-copy:nth-child(3) {
+  stroke: #fff;
+  stroke-dashoffset: 21%;
+}
+.text-copy:nth-child(4) {
+  stroke: #fff;
+  stroke-dashoffset: 28%;
+}
+.text-copy:nth-child(5) {
+  stroke: #fff;
+  stroke-dashoffset: 35%;
+}
+@-webkit-keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+@-moz-keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+@-webkit-keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+@-o-keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
 }
 #nav-toggle {
   padding: 15px 35px 16px 0;
