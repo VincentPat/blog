@@ -128,7 +128,7 @@
 		<div class="layout layout--center">
 			<div class="layout__item palm-mb">
 				<div class="media">
-					<a href="/2016/11/13/resume/" title="关于我"><img class="headimg" src='/headimg.jpg' alt='Vincent Pat'></a>
+					<a href="/resume/" title="关于我"><img class="headimg" src='/headimg.jpg' alt='Vincent Pat'></a>
 					<div class="media__body">
 						<h4>Vincent Pat</h4>
 						<p class='site-description'>如果一直是小白，那是因为我不想变黑</p>
@@ -171,6 +171,12 @@
 	 		$('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
    			prettyPrint();
 		});
+
+		// 简历-展开/折叠
+		function toggleProject(obj) {
+			$(obj).toggleClass("expand");
+			$(obj).next().slideToggle(200);
+		}
 	</script>
 	</body>
 </html>
