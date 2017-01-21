@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>如何生成公众号关注页面链接 | 路人日志</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="/css/font-awesome/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/js/google-code-prettify/hemisu-light.min.css">
+
+  </head>
+
+  <body>
+
+<header>
+	<a id="logo" href="/" title="路人日志">
+	<img src="/favicon.png" alt="路人日志"></a>
+	
+	
+
+	
+		<!--侧边导航栏-->
+		<a id="nav-toggle" href="#"><span></span></a>
+
+<nav>
+	<div class="menu-top-container">
+		<ul id="menu-top" class="menu">
+			
+				
+				<li class="current-menu-item">
+					<a href="/2016/11/12/welcome/" target="">欢迎</a>
+				</li>
+			
+				
+				<li class="current-menu-item">
+					<a href="/2016/11/13/resume/" target="">关于我</a>
+				</li>
+			
+		</ul>
+	</div>
+</nav>
+	
+
+</header>
+<div class="m-header ">
+	<div class="title-container">
+		<!-- <div class="title">路人日志</div> -->
+		<svg viewBox="0 0 220 80" preserveAspectRatio="xMidYMid meet">
+	        <symbol id="s-text">
+	            <text text-anchor="middle" x="50%" y="70%">路人日志</text>
+	        </symbol>
+	        <g class="g-ants">
+	            <use xlink:href="#s-text"
+	                class="text-copy"></use>         
+	            <use xlink:href="#s-text"
+	                class="text-copy"></use>         
+	            <use xlink:href="#s-text"
+	                class="text-copy"></use>         
+	            <use xlink:href="#s-text"
+	                class="text-copy"></use>         
+	            <use xlink:href="#s-text"
+	                class="text-copy"></use>         
+	        </g>
+	    </svg>
+	</div>
+	<section id="hero1" class="hero">
+		<div class="inner">
+		</div>
+	</section>
+	
+		<figure class="top-image" data-enable=true></figure>
+	
+</div>
+
+<!--文章列表-->
+<div class="wrapper ">
+  
+    <!--文章-->
+<article>
+	
+  
+    <h1 class="post-title" itemprop="name">
+      如何生成公众号关注页面链接
+    </h1>
+  
+
+	<div class='post-body mb'>
+		<h2 id="微信公众号的关注页面"><a href="#微信公众号的关注页面" class="headerlink" title="微信公众号的关注页面"></a>微信公众号的关注页面</h2><p>之前一直都是没有链接的，访问的方式大多依靠二维码，页面如下所示：</p>
+<p><img src="../images/公众号页面.png" alt=""></p>
+<p>现在可以稍微使用一点黑科技来生成这个页面的链接，已关注和未关注的页面效果如下：</p>
+<p><img src="../images/未关注.png" alt=""></p>
+<p><img src="../images/已关注.png" alt=""></p>
+<h2 id="怎样生成"><a href="#怎样生成" class="headerlink" title="怎样生成"></a>怎样生成</h2><h4 id="第一步-进入公众号关注页面，查看历史消息"><a href="#第一步-进入公众号关注页面，查看历史消息" class="headerlink" title="第一步: 进入公众号关注页面，查看历史消息"></a>第一步: 进入公众号关注页面，查看历史消息</h4><p><img src="../images/公众号页面.png" alt=""></p>
+<h4 id="第二步-复制页面链接"><a href="#第二步-复制页面链接" class="headerlink" title="第二步: 复制页面链接"></a>第二步: 复制页面链接</h4><p><img src="../images/历史消息复制链接.png" alt=""></p>
+<h4 id="第三步-提取链接内容"><a href="#第三步-提取链接内容" class="headerlink" title="第三步: 提取链接内容"></a>第三步: 提取链接内容</h4><p>例如，小游戏福利社的历史消息页面复制出来的链接如下：</p>
+<p><a href="http://mp.weixin.qq.com/mp/getmasssendmsg?__biz=MzI2OTQzNzM3NQ==#wechat_webview_type=1&amp;wechat_redirect" target="_blank" rel="external">http://mp.weixin.qq.com/mp/getmasssendmsg?__biz=MzI2OTQzNzM3NQ==#wechat_webview_type=1&amp;wechat_redirect</a></p>
+<p>需要提取的内容是，__biz=后面，==#wechat前面的一串文本，即上述链接中的：</p>
+<p>MzI2OTQzNzM3NQ</p>
+<h4 id="第四步-组合链接内容"><a href="#第四步-组合链接内容" class="headerlink" title="第四步: 组合链接内容"></a>第四步: 组合链接内容</h4><p>将第三步中提取的内容，填入下面链接的XXX位置即可。</p>
+<p><a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=XXX==#wechat_redirect" target="_blank" rel="external">https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=XXX==#wechat_redirect</a></p>
+<p>最终生成的链接：</p>
+<p><a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=MzI2OTQzNzM3NQ==#wechat_redirect" target="_blank" rel="external">https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=MzI2OTQzNzM3NQ==#wechat_redirect</a></p>
+
+	</div>
+	<div class="meta split">
+		<time class="post-date" datetime="2017-01-21T15:01:32.000Z" itemprop="datePublished">2017-01-21</time>
+	</div>
+</article>
+
+<!--评论-->
+
+	
+<div class="ds-thread" data-thread-key="如何生成公众号关注页面链接" data-title="如何生成公众号关注页面链接" data-url="https://lrdiary.com/如何生成公众号关注页面链接/"></div>
+<script type="text/javascript">
+
+var duoshuoQuery = {short_name:"yumemor"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
+
+
+  
+</div>
+
+
+  <svg id="bigTriangleColor" width="100%" height="40" viewBox="0 0 100 102" preserveAspectRatio="none">
+    <path d="M0 0 L50 100 L100 0 Z"></path>
+  </svg>
+
+  
+
+
+  <div class="wrapper"></div>
+
+
+
+
+
+<div class="fat-footer">
+	<div class="wrapper">
+		<div class="layout layout--center">
+			<div class="layout__item palm-mb">
+				<div class="media">
+					<a href="/resume/" title="关于我"><img class="headimg" src='/headimg.jpg' alt='Vincent Pat'></a>
+					<div class="media__body">
+						<h4>Vincent Pat</h4>
+						<p class='site-description'>如果一直是小白，那是因为我不想变黑</p>
+					</div>
+				</div>
+				<div class="author-contact">
+					<ul>
+						
+							
+							<li>
+				        		<a href="https://github.com/VincentPat" target="_blank">
+				        			
+				        				<i class="icon-github"></i>
+				        			
+				        		</a>
+				        	</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="footer" role="contentinfo">
+	<div class="wrapper wrapper--wide split split--responsive">
+		<span>Theme by <a href="http://github.com/yumemor">Yumemor</a>. Powered by <a href="http://hexo.io">Hexo</a></span>
+	</div>
+</footer>
+
+	<!-－这里导入了 lib.js 里面涵盖了 jQuery 等框架 所以注释掉-->
+	<!--<script src="http://lib.sinaapp.com/js/jquery/2.0/jquery.min.js"></script>-->
+	<script src="/js/lib.js"></script>
+	<script src="/js/google-code-prettify/prettify.js"></script>
+	<script src="/js/module.js"></script>
+	<script src="/js/script.js"></script>
+	<script type='text/javascript'>
+		//代码高亮
+		$(document).ready(function(){
+	 		$('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+   			prettyPrint();
+		});
+
+		// 简历-展开/折叠
+		function toggleProject(obj) {
+			$(obj).toggleClass("expand");
+			$(obj).next().slideToggle(200);
+		}
+	</script>
+	</body>
+</html>
