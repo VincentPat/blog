@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     
-    <title>使用SVG实现勾勒文字动画 | 路人日志</title>
+    <title>img-previewer | 路人日志</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     
@@ -99,25 +99,49 @@
 	
   
     <h1 class="post-title" itemprop="name">
-      使用SVG实现勾勒文字动画
+      img-previewer
     </h1>
   
 
 	<div class='post-body mb'>
-		<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><img src="../images/SVG勾勒文字.png" alt=""></p>
-<h2 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h2><p>动画效果请查看 <a href="https://vincentpat.github.io/Elastic-Stroke/" target="_blank" rel="external">Demo</a></p>
-<p>详情请查看 <a href="https://github.com/VincentPat/Elastic-Stroke" target="_blank" rel="external">Github</a></p>
+		<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><img src="../images/本地预览图片.png" alt=""></p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><h4 id="实现方式一：使用FileReader"><a href="#实现方式一：使用FileReader" class="headerlink" title="实现方式一：使用FileReader"></a>实现方式一：使用FileReader</h4><pre><code class="javascript">var preview = document.getElementById(&quot;preview&quot;);
+var file = document.getElementById(&quot;file-input&quot;).files.item(0);
+var reader = new FileReader();
+reader.onload = function() {
+    preview.src = reader.result;
+}
+if (file) {
+    reader.readAsDataURL(file);
+} else {
+    preview.src = &quot;&quot;;
+}
+</code></pre>
+<h4 id="实现方式二：使用URL-createObjectURL"><a href="#实现方式二：使用URL-createObjectURL" class="headerlink" title="实现方式二：使用URL.createObjectURL"></a>实现方式二：使用URL.createObjectURL</h4><pre><code class="javascript">var id = &quot;file-input&quot;;
+var preview = document.getElementById(&quot;preview&quot;);
+var url;
+if (navigator.userAgent.indexOf(&quot;MSIE&quot;) &gt;= 1) { // IE
+    url = document.getElementById(id).value;
+} else if (navigator.userAgent.indexOf(&quot;Firefox&quot;) &gt; 0) { // Firefox
+    url = window.URL.createObjectURL(document.getElementById(id).files.item(0));
+} else if (navigator.userAgent.indexOf(&quot;Chrome&quot;) &gt; 0) { // Chrome
+    url = window.URL.createObjectURL(document.getElementById(id).files.item(0));
+}
+preview.src = url;
+</code></pre>
+<h2 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h2><p>完整示例请查看 <a href="https://vincentpat.github.io/img-previewer/" target="_blank" rel="external">DEMO</a></p>
+<p>详情请查看<br><a href="https://github.com/VincentPat/img-previewer" target="_blank" rel="external">Github</a></p>
 
 	</div>
 	<div class="meta split">
-		<time class="post-date" datetime="2017-01-22T01:32:10.000Z" itemprop="datePublished">2017-01-22</time>
+		<time class="post-date" datetime="2017-01-22T07:45:45.000Z" itemprop="datePublished">2017-01-22</time>
 	</div>
 </article>
 
 <!--评论-->
 
 	
-<div class="ds-thread" data-thread-key="elastic-stroke" data-title="使用SVG实现勾勒文字动画" data-url="https://lrdiary.com/elastic-stroke/"></div>
+<div class="ds-thread" data-thread-key="img-previewer" data-title="img-previewer" data-url="https://lrdiary.com/img-previewer/"></div>
 <script type="text/javascript">
 
 var duoshuoQuery = {short_name:"yumemor"};
