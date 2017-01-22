@@ -669,6 +669,9 @@ article .post-body img {
 article .post-body p {
   margin-bottom: 20px;
 }
+article .post-body a {
+  text-decoration: underline;
+}
 article .post-body p + h1,
 article .post-body p + h2,
 article .post-body p + h3,
