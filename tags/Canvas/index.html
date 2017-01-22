@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     
-    <title>使用Canvas绘制伪3D立方体 | 路人日志</title>
+    <title>tag: Canvas | 路人日志</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     
@@ -94,80 +94,27 @@
 <!--文章列表-->
 <div class="wrapper ">
   
-    <!--文章-->
-<article>
-	
-  
-    <h1 class="post-title" itemprop="name">
-      使用Canvas绘制伪3D立方体
-    </h1>
-  
-
-	<div class='post-body mb'>
-		<h1 id="DrawCube"><a href="#DrawCube" class="headerlink" title="DrawCube"></a>DrawCube</h1><p>用Canvas绘制正方体，其中三个面可用纯色或者图片，可以设定立方体的宽和高，最终返回生成好的Canvas元素。</p>
-<h2 id="方法说明"><a href="#方法说明" class="headerlink" title="方法说明"></a>方法说明</h2><pre><code class="javascript">/**
- * 绘制正方体
- * @param  {Number} l   宽
- * @param  {Number} h   高
- * @param  {String|Object} key 颜色代码或三个面的图片
- * @return {Canvas Element}    生成好的Canvas元素
- */
-function drawCube(l, h, key) {···}
-</code></pre>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h4 id="引入drawCube-js"><a href="#引入drawCube-js" class="headerlink" title="引入drawCube.js"></a>引入drawCube.js</h4><pre><code class="html">&lt;script src=&quot;drawCube.js&quot;&gt;&lt;/script&gt;
-</code></pre>
-<h4 id="HTML结构"><a href="#HTML结构" class="headerlink" title="HTML结构"></a>HTML结构</h4><pre><code class="html">&lt;canvas width=&quot;800&quot; height=&quot;300&quot; id=&quot;canvas&quot;&gt;&lt;/canvas&gt;
-&lt;img src=&quot;assets/left.png&quot; alt=&quot;&quot; id=&quot;left&quot;&gt;
-&lt;img src=&quot;assets/right.png&quot; alt=&quot;&quot; id=&quot;right&quot;&gt;
-&lt;img src=&quot;assets/top.png&quot; alt=&quot;&quot; id=&quot;top&quot;&gt;
-</code></pre>
-<h4 id="使用纯色绘制"><a href="#使用纯色绘制" class="headerlink" title="使用纯色绘制"></a>使用纯色绘制</h4><pre><code class="javascript">drawCube(100, 100, &quot;#7A0004&quot;);
-</code></pre>
-<h4 id="使用图片绘制"><a href="#使用图片绘制" class="headerlink" title="使用图片绘制"></a>使用图片绘制</h4><pre><code class="javascript">var left = document.getElementById(&quot;left&quot;);
-var right = document.getElementById(&quot;right&quot;);
-var top = document.getElementById(&quot;top&quot;);
-drawCube(100, 100, {left: left, right: right, top: top});
-</code></pre>
-<h4 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h4><p><img src="../images/绘制立方体.png" alt=""></p>
-<h2 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h2><p>完整示例请查看 <a href="https://vincentpat.github.io/DrawCube/" target="_blank" rel="external">DEMO</a></p>
-<p>详情查看 <a href="https://github.com/VincentPat/DrawCube" target="_blank" rel="external">Github</a></p>
-
-	</div>
-	<div class="meta split">
-		<time class="post-date" datetime="2017-01-22T07:09:13.000Z" itemprop="datePublished">2017-01-22</time>
-	</div>
-</article>
-
-<!--评论-->
-
-	
-<div class="ds-thread" data-thread-key="drawCube" data-title="使用Canvas绘制伪3D立方体" data-url="https://lrdiary.com/drawCube/"></div>
-<script type="text/javascript">
-
-var duoshuoQuery = {short_name:"yumemor"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0]
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-</script>
-
-
+    <ul class="posts-list mb+ js-posts">
+      
+                <!--<div class="type">
+          <div class="mask">
+            <i class="iconfont"></i>
+          </div>
+          </div>-->
+        <li class="post">
+          
+            <i class="post-status iconfont icon-icon"></i>  
+          
+          <h2 class="no-background"  >
+            <span><a href="/drawCube/">使用Canvas绘制伪3D立方体</a></span>
+            <time class="post-time" datetime="2017-01-22T07:09:13.000Z" itemprop="datePublished">2017-01-22</time>
+          </h2>
+        </li>
+      
+    </ul>
+    
   
 </div>
-
-
-  <svg id="bigTriangleColor" width="100%" height="40" viewBox="0 0 100 102" preserveAspectRatio="none">
-    <path d="M0 0 L50 100 L100 0 Z"></path>
-  </svg>
-
-  
-
-
-  <div class="wrapper"></div>
 
 
 
