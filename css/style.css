@@ -804,33 +804,42 @@ article .post-body blockquote:before {
 svg:not(:root) {
   overflow: hidden;
 }
-.resume-wrapper > div {
+.resume-wrapper {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px 0px #ddd;
+  background-image: url("../../resume-bg.png");
+}
+.resume-wrapper > section {
   padding: 20px;
 }
-.resume-wrapper > div .detail,
-.resume-wrapper > div .job,
-.resume-wrapper > div .desc,
-.resume-wrapper > div .contents {
+.resume-wrapper > section .detail,
+.resume-wrapper > section .job,
+.resume-wrapper > section .desc,
+.resume-wrapper > section .contents,
+.resume-wrapper > section .link {
   padding-left: 40px;
-  line-height: 26px;
+  line-height: 30px;
 }
-.resume-wrapper > div .detail span,
-.resume-wrapper > div .job span,
-.resume-wrapper > div .desc span,
-.resume-wrapper > div .contents span {
+.resume-wrapper > section .detail span,
+.resume-wrapper > section .job span,
+.resume-wrapper > section .desc span,
+.resume-wrapper > section .contents span,
+.resume-wrapper > section .link span {
   padding-right: 30px;
 }
-.resume-wrapper > div .detail .job {
+.resume-wrapper > section .detail .job {
   padding-left: 0px;
 }
-.resume-wrapper > div .title {
+.resume-wrapper > section .title {
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 10px;
   line-height: 50px;
   border-bottom: 2px dashed #000;
 }
-.resume-wrapper > div .label {
+.resume-wrapper > section .label {
   width: 25%;
   min-width: 150px;
   text-align: right;
@@ -885,17 +894,21 @@ svg:not(:root) {
 }
 .resume-wrapper .projects .detail {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
+  line-height: 30px;
   font-weight: bold;
   cursor: pointer;
   transition: all linear 0.2s;
   -webkit-transition: all linear 0.2s;
 }
 .resume-wrapper .projects .detail:hover {
-  background: #eee;
+  background: #f5f5f5;
 }
 .resume-wrapper .projects .detail:hover i {
   opacity: 1;
+}
+.resume-wrapper .projects .detail span {
+  display: inline-block;
 }
 .resume-wrapper .projects .detail i {
   display: inline-block;
@@ -909,6 +922,9 @@ svg:not(:root) {
   transition: all linear 0.2s;
   -webkit-transition: all linear 0.2s;
 }
+.resume-wrapper .projects .detail.expand {
+  background: #f5f5f5;
+}
 .resume-wrapper .projects .detail.expand i {
   opacity: 1;
 }
@@ -919,22 +935,48 @@ svg:not(:root) {
 .resume-wrapper .projects .job span,
 .resume-wrapper .projects .desc span,
 .resume-wrapper .projects .contents span,
+.resume-wrapper .projects .link span,
 .resume-wrapper .projects .job ul,
 .resume-wrapper .projects .desc ul,
-.resume-wrapper .projects .contents ul {
+.resume-wrapper .projects .contents ul,
+.resume-wrapper .projects .link ul,
+.resume-wrapper .projects .job a,
+.resume-wrapper .projects .desc a,
+.resume-wrapper .projects .contents a,
+.resume-wrapper .projects .link a {
   display: inline-block;
   width: 72%;
   vertical-align: top;
 }
 .resume-wrapper .projects .job ul,
 .resume-wrapper .projects .desc ul,
-.resume-wrapper .projects .contents ul {
+.resume-wrapper .projects .contents ul,
+.resume-wrapper .projects .link ul {
   margin-bottom: 0px;
 }
 .resume-wrapper .projects .job ul li,
 .resume-wrapper .projects .desc ul li,
-.resume-wrapper .projects .contents ul li {
+.resume-wrapper .projects .contents ul li,
+.resume-wrapper .projects .link ul li {
   list-style: inherit;
+}
+.resume-wrapper .projects .job a,
+.resume-wrapper .projects .desc a,
+.resume-wrapper .projects .contents a,
+.resume-wrapper .projects .link a {
+  transition: all linear 0.2s;
+}
+.resume-wrapper .projects .job a:hover,
+.resume-wrapper .projects .desc a:hover,
+.resume-wrapper .projects .contents a:hover,
+.resume-wrapper .projects .link a:hover {
+  filter: brightness(1.2);
+}
+.resume-wrapper .projects .job a:active,
+.resume-wrapper .projects .desc a:active,
+.resume-wrapper .projects .contents a:active,
+.resume-wrapper .projects .link a:active {
+  filter: brightness(0.8);
 }
 .resume-wrapper .projects .detail-container {
   display: none;
@@ -945,6 +987,34 @@ svg:not(:root) {
 }
 .resume-wrapper .projects .detail-container:last-child {
   border-bottom: none;
+}
+.resume-footer {
+  margin: 40px 0px;
+}
+.resume-footer .action {
+  text-align: center;
+}
+.resume-footer .action div {
+  color: #666;
+  margin-bottom: 10px;
+}
+.resume-footer .action button {
+  color: #666;
+  line-height: 40px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #ddd;
+  font-size: 20px;
+  background: #fafafa;
+  width: 100px;
+  cursor: pointer;
+  transition: all linear 0.2s;
+}
+.resume-footer .action button:hover {
+  filter: brightness(1.05);
+}
+.resume-footer .action button:active {
+  filter: brightness(0.95);
 }
 #social-share {
   width: 50px;
@@ -1305,11 +1375,23 @@ footer .wrapper--wide {
   max-width: 940px;
 }
 @media print {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
   header,
   .m-header,
   .fat-footer,
   footer {
     display: none;
+  }
+  #bigTriangleColor {
+    display: none;
+  }
+  .resume-wrapper {
+    box-shadow: none;
+    font-size: 14px;
   }
   .resume-wrapper .basic .description,
   .resume-wrapper .basic .name {
@@ -1317,5 +1399,14 @@ footer .wrapper--wide {
   }
   .resume-wrapper .basic .name-print {
     display: block;
+  }
+  .resume-wrapper .projects .detail {
+    background: #f5f5f5;
+  }
+  .resume-wrapper .projects .detail-container {
+    display: block;
+  }
+  .resume-footer {
+    display: none;
   }
 }

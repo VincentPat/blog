@@ -98,7 +98,7 @@
 <div class="wrapper resume-wrapper">
   
     <!-- 基本资料 -->
-<div class="basic">
+<section class="basic">
 	<!-- 头像 -->
 	<img src="/headimg.jpg" alt="我的头像">
 	<!-- 名称 -->
@@ -132,9 +132,9 @@
 			<span>生于1993.05</span>
 		</div>
 	</div>
-</div>
+</section>
 <!-- 教育经历 -->
-<div class="education">
+<section class="education">
 	<div class="title">Education</div>
 	<div class="detail">
 		<div class="label">2011.09-2015.07</div>
@@ -142,19 +142,95 @@
 		<span class="profession">软件工程</span>
 		<span class="degree">本科</span>
 	</div>
-</div>
+</section>
 <!-- 工作经历 -->
-<div class="worklife">
+<section class="worklife">
 	<div class="title">Work Experience</div>
 	<div class="detail">
 		<div class="label">2014.08-至今</div>
 		<span class="company">广州善游网络科技有限公司</span>
 		<span class="job">前端开发工程师</span>
 	</div>
-</div>
+</section>
 <!-- 项目经验 -->
-<div class="projects">
+<section class="projects">
 	<div class="title">Projects</div>
+	
+	
+	<div class="detail" title="展开/折叠" onclick="toggleProject(this)">
+		<i class="icon-caret-right"></i>
+		<div class="label">2017.02-至今</div>
+		<span class="name">24好玩-工作台</span>
+	</div>
+	<div class="detail-container">
+		<div class="job">
+			<div class="label">职责</div>
+			<span>前端开发</span>
+		</div>
+		<div class="desc">
+			<div class="label">简述</div>
+			<span>24好玩工作台是24好玩为平台用户编辑活动配置提供的工具，完全根据模板开发者预设的配置表进行渲染，提供素材库、奖品库、取色板、即时预览等等功能供用户使用。</span>
+		</div>
+		<div class="contents">
+			<div class="label">内容</div>
+			<ul>
+			
+				<li class="content">发布到npm，提供本地开发版本</li>
+			
+				<li class="content">使用Sentry实现错误监控</li>
+			
+				<li class="content">使用Vue异步组件和Webpack的Code Spliting实现按需加载</li>
+			
+				<li class="content">使用Karma完成单元测试</li>
+			
+				<li class="content">使用gitbook输出文档</li>
+			
+			</ul>
+		</div>
+		
+		<div class="link">
+			<div class="label">详情</div>
+			<a href="https://24haowan.gitbooks.io/workbench/content/" target="_blank">https://24haowan.gitbooks.io/workbench/content/</a>
+		</div>
+		
+	</div>
+	
+	
+	<div class="detail" title="展开/折叠" onclick="toggleProject(this)">
+		<i class="icon-caret-right"></i>
+		<div class="label">2017.02-至今</div>
+		<span class="name">24好玩-HWSDK</span>
+	</div>
+	<div class="detail-container">
+		<div class="job">
+			<div class="label">职责</div>
+			<span>前端开发</span>
+		</div>
+		<div class="desc">
+			<div class="label">简述</div>
+			<span>HWSDK（好玩SDK）是24好玩面向开发者提供的开发工具包。提供平台营销相关功能、用户信息等接口，开发者通过调用相应的方法，可完成平台功能的接入。</span>
+		</div>
+		<div class="contents">
+			<div class="label">内容</div>
+			<ul>
+			
+				<li class="content">使用Vue异步组件和Webpack的Code Spliting实现按需加载</li>
+			
+				<li class="content">使用Karma完成单元测试</li>
+			
+				<li class="content">使用gitbook、jsdoc、jsdoc2md输出文档</li>
+			
+				<li class="content">单例模式</li>
+			
+			</ul>
+		</div>
+		
+		<div class="link">
+			<div class="label">详情</div>
+			<a href="https://24haowan.gitbooks.io/hwsdk/content/" target="_blank">https://24haowan.gitbooks.io/hwsdk/content/</a>
+		</div>
+		
+	</div>
 	
 	
 	<div class="detail" title="展开/折叠" onclick="toggleProject(this)">
@@ -175,9 +251,7 @@
 			<div class="label">内容</div>
 			<ul>
 			
-				<li class="content">使用Vue进行构建（重构中）</li>
-			
-				<li class="content">使用RequireJS进行JS代码的模块化管理</li>
+				<li class="content">使用Vue及Vue相关技术栈进行构建</li>
 			
 				<li class="content">游戏对接平台脚手架的开发</li>
 			
@@ -185,10 +259,16 @@
 			
 				<li class="content">CDN、OSS的使用</li>
 			
-				<li class="content">后端使用PHP+MySQL</li>
+				<li class="content">后端使用PHP+MySQL+Nodejs</li>
 			
 			</ul>
 		</div>
+		
+		<div class="link">
+			<div class="label">详情</div>
+			<a href="http://www.24haowan.com/" target="_blank">http://www.24haowan.com/</a>
+		</div>
+		
 	</div>
 	
 	
@@ -220,6 +300,7 @@
 			
 			</ul>
 		</div>
+		
 	</div>
 	
 	
@@ -257,6 +338,7 @@
 			
 			</ul>
 		</div>
+		
 	</div>
 	
 	
@@ -304,6 +386,7 @@
 			
 			</ul>
 		</div>
+		
 	</div>
 	
 	
@@ -335,6 +418,7 @@
 			
 			</ul>
 		</div>
+		
 	</div>
 	
 	
@@ -374,6 +458,7 @@
 			
 			</ul>
 		</div>
+		
 	</div>
 	
 	
@@ -413,6 +498,7 @@
 			
 			</ul>
 		</div>
+		
 	</div>
 	
 	
@@ -446,6 +532,7 @@
 			
 			</ul>
 		</div>
+		
 	</div>
 	
 	
@@ -477,6 +564,7 @@
 			
 			</ul>
 		</div>
+		
 	</div>
 	
 	
@@ -512,12 +600,24 @@
 			
 			</ul>
 		</div>
+		
 	</div>
 	
-</div>
+</section>
 
   
 </div>
+
+
+    <!-- 简历页脚 -->
+<div class="resume-footer">
+    <section class="action">
+        <div>如果你是HR，我猜你想</div>
+        <button onclick="window.print()"><i class="icon-print"></i></button>
+    </section>
+</div>
+
+
 
 
   <svg id="bigTriangleColor" width="100%" height="40" viewBox="0 0 100 102" preserveAspectRatio="none">
@@ -528,8 +628,6 @@
 
 
   <div class="wrapper"></div>
-
-
 
 
 
