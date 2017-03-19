@@ -89,7 +89,7 @@
         var bannerNode = $('.top-image');
         if(bannerNode.data('enable')){
             var index = parseInt((Math.random() * 11) + 1);
-            bannerNode.attr('style','background-image:url(//oss.lrdiary.com/'+index+'.jpg)');
+            bannerNode.attr('style','background-image:url(//oss.lrdiary.com/banner/'+index+'.jpg)');
         }
     })
 
