@@ -559,6 +559,18 @@ h2.no-background span:after {
 .pagination i {
   font-size: 40px;
 }
+.post-tags {
+  font-size: 12px;
+  margin-top: 10px;
+}
+.post-tags a {
+  display: inline-block;
+  background: #ccc;
+  color: #fff;
+  line-height: 18px;
+  padding: 0px 6px;
+  border-radius: 4px;
+}
 @media screen and (max-width: 719px) {
   .fat-footer .yc {
     display: none;
@@ -809,7 +821,7 @@ svg:not(:root) {
   padding-bottom: 40px;
   border-radius: 5px;
   box-shadow: 0px 2px 10px 0px #ddd;
-  background-image: url("../../resume-bg.png");
+  background-image: url("//oss.lrdiary.com/resume-bg.png");
 }
 .resume-wrapper > section {
   padding: 20px;
